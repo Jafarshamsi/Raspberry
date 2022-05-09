@@ -76,11 +76,31 @@ https://www.raspberrypi.com/software/
    ```
    * QUICK-NOTE: More information here: https://www.raspberrypi.com/documentation/accessories/camera.html#raspicam-commands
 
-**2. USING libcamera library: Disable Raspicam library from raspi-cofing**
-
+**2. USING libcamera library (Not working now): Disable Raspicam library from raspi-cofing**
    * QUICK-NOTE: More information here: https://www.raspberrypi.com/documentation/accessories/camera.html#libcamera-and-libcamera-apps
+
+## Part 4: QR Code reader
+   * install packages
+   ```sh
+   sudo apt-get update
+   sudo apt-get install python3-opencv libzbar0 python3-pip
+   python3 -m pip install pyzbar
+
+   sudo apt-get install python3-opencv
+   sudo apt-get install python3-sip python3-pyqt5 libjasper-dev libatlas-base-dev -y
+   pip3 install opencv-contrib-python
+   sudo modprobe bcm2835-v4l2
+   ```
+   * check python
+   ```sh
+   python
+   print("Hello World!")
+   exit()
+   ```
+   * Open Thonny Python IDE (Programming/Thonny Python IDE)
 ## Reference
 [1] https://www.raspberrypi.com/documentation/computers/os.html 
 [2] https://www.raspberrypi.com/documentation/accessories/camera.html
 [3] https://www.tomshardware.com/reviews/raspberry-pi-headless-setup-how-to,6028.html
- 
+[4] https://learn.sparkfun.com/tutorials/python-programming-tutorial-getting-started-with-the-raspberry-pi/hello-world#
+[5] https://peppe8o.com/read-qr-codes-from-raspberry-pi-with-pyzbar-and-python/

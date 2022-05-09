@@ -29,6 +29,7 @@ https://www.raspberrypi.com/software/
    * Select "Interfacing Options", then "VNC"and enable it
 
  **2. Download, install and launch VNC Viewer**
+ https://www.realvnc.com/en/connect/download/viewer/windows/
  
  **3. create a new connection: Enter "raspberrypi.local" in VNC Server section**
  

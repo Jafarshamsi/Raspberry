@@ -69,7 +69,6 @@ https://www.raspberrypi.com/software/
    ```sh
    raspivid -t 5000 -p 0,0,640,480 -vf
    ```
-   * QUICK-NOTE: it was possible to enable it from Raspberry Pi Configuration inside the OS, however, it seems that it is removed from there
 
 ## Reference
    [1] https://www.raspberrypi.com/documentation/computers/os.html

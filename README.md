@@ -4,23 +4,23 @@
 **1. Download, install, and run "Raspberry Pi Imager"**
 https://www.raspberrypi.com/software/
 
-**2. Choose OS: Raspberry Pi OS (32 bit)
+**2. Choose OS: Raspberry Pi OS (32 bit)**
 
-**3. Choose Storage: select SD card
+**3. Choose Storage: select SD card**
 
-**4. Advanced Option: Set hostname, Enable SSH, Set Username and Password, Configure Wireless LAN, Set local settings, then save!
+**4. Advanced Option: Set hostname, Enable SSH, Set Username and Password, Configure Wireless LAN, Set local settings, then save!**
 
-**5. Write!
+**5. Write!**
 
-**6. Put SD card inside the SD card socket on Raspberry Pi Zero 2 W
+**6. Put SD card inside the SD card socket on Raspberry Pi Zero 2 W**
 
-**7. Connect it to computer through USB socket (If not installed, Download and install Bonjour Print Services from apple.com)
+**7. Connect it to computer through USB socket (If not installed, Download and install Bonjour Print Services from apple.com)**
 
-**8. Open MobaXterm or Putty and use SSH with hostname = raspberrypi.local and port=22
+**8. Open MobaXterm or Putty and use SSH with hostname = raspberrypi.local and port=22**
 
 **9. Enter username and password**
 
-## Part 2: Enabling and Connecting over VNC
+## Part 2: Enabling and Connecting over VNC**
 
 **1. Enable VNC**
    ```sh

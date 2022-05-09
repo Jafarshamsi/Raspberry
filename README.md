@@ -52,7 +52,7 @@ https://www.raspberrypi.com/software/
 ## Part 4: Connecting Raspberry Cam
 **1. Connect to PI over VNC Viwer**
 
-**2. Enable raspberry pi camera from raspi-cofing**
+**2. USING Raspicam library: Enable raspberry pi camera from raspi-cofing**
    * open raspbery config
    ```sh
    sudo raspi-config
@@ -60,7 +60,6 @@ https://www.raspberrypi.com/software/
    * Interface Options/ Enable Camera
    * QUICK-NOTE: it was possible to enable it from Raspberry Pi Configuration inside the OS, however, it seems that it is removed from there
 
-**3. Take picture and view video**
    * Take Picture: go to desktop
    ```sh
    raspistill -o 1.jpg
@@ -69,7 +68,11 @@ https://www.raspberrypi.com/software/
    ```sh
    raspivid -t 5000 -p 0,0,640,480 -vf
    ```
+   * QUICK-NOTE: More information here: https://www.raspberrypi.com/documentation/accessories/camera.html#raspicam-commands
 
+**2. USING libcamera library: Disable Raspicam library from raspi-cofing**
+
+   * QUICK-NOTE: More information here: https://www.raspberrypi.com/documentation/accessories/camera.html#libcamera-and-libcamera-apps
 ## Reference
 [1] https://www.raspberrypi.com/documentation/computers/os.html 
 [2] https://www.raspberrypi.com/documentation/accessories/camera.html

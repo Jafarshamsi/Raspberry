@@ -35,3 +35,16 @@ https://www.raspberrypi.com/software/
  
  **4. Enter Username and Password**
  
+## Part 3: Changing the WIFI network
+* Create file "wpa_supplicant.conf", write the following lines there, and put the file in the boot folder in SD card.
+   ```sh
+   country=US
+   ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+   update_config=1
+
+   network={
+   scan_ssid=1
+   ssid="your_wifi_ssid"
+   psk="your_wifi_password"
+   }
+   ```

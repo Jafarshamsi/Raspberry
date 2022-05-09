@@ -74,3 +74,4 @@ https://www.raspberrypi.com/software/
   [1] https://www.raspberrypi.com/documentation/computers/os.html 
   [2] https://www.raspberrypi.com/documentation/accessories/camera.html
   [3] https://www.tomshardware.com/reviews/raspberry-pi-headless-setup-how-to,6028.html
+ 

@@ -20,6 +20,11 @@ https://www.raspberrypi.com/software/
 
 **9. Enter username and password**
 
+**10. Check the OS**
+   ```sh
+   uname -a
+   lsb_release -a
+   ```
 ## Part 2: Enabling and Connecting over VNC
 
 **1. Enable VNC**

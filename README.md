@@ -3,6 +3,7 @@
 ## Part 1: Install Raspberry Pi OS on Windows
 **1. Download, install, and run "Raspberry Pi Imager"**
 https://www.raspberrypi.com/software/
+![alt text](https://github.com/Jafarshamsi/Raspberry/blob/main/IMAGE/1.RPI_OS.png)
 
 **2. Choose OS: Raspberry Pi OS (32 bit)**
 

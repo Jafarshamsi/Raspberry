@@ -26,9 +26,7 @@ https://www.raspberrypi.com/software/
    ```sh
    sudo raspi-config
    ```
-   * Select "Interfacing Options"
-   * Select "VNC"and enable it
-   * Finish
+   * Select "Interfacing Options", then "VNC"and enable it
 
  **2. Download, install and launch VNC Viewer**
  

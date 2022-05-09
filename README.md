@@ -28,13 +28,14 @@ https://www.raspberrypi.com/software/
    ```
    * Select "Interfacing Options", then "VNC"and enable it
 
- **2. Download, install and launch VNC Viewer**
+**2. Download, install and launch VNC Viewer**
  https://www.realvnc.com/en/connect/download/viewer/windows/
  
  **3. create a new connection: Enter "raspberrypi.local" in VNC Server section**
  
  **4. Enter Username and Password**
- 
+ * QUICK-NOTE: if you see  "cannot currently show the desktop" on VNC viewer, then change the resolution
+
 ## Part 3: Changing the WIFI network, if it has changed (Headless)
 * Create file "wpa_supplicant.conf", write the following lines there, and put the file in the boot folder in SD card. https://github.com/Jafarshamsi/Raspberry/tree/main/First_Boot
    ```sh

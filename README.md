@@ -34,4 +34,5 @@ https://www.raspberrypi.com/software/
  
  **3. create a new connection: Enter "raspberrypi.local" in VNC Server section**
  
- **4. Enter Username and Password
+ **4. Enter Username and Password**
+ 

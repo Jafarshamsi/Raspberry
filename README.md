@@ -85,19 +85,14 @@ https://www.raspberrypi.com/software/
    sudo apt-get update
    sudo apt-get install python3-opencv libzbar0 python3-pip
    python3 -m pip install pyzbar
-
-   sudo apt-get install python3-opencv
-   sudo apt-get install python3-sip python3-pyqt5 libjasper-dev libatlas-base-dev -y
-   pip3 install opencv-contrib-python
-   sudo modprobe bcm2835-v4l2
    ```
-   * check python
+   * check python and Thonny Python IDE (Programming/Thonny Python IDE)
    ```sh
    python
    print("Hello World!")
    exit()
    ```
-   * Open Thonny Python IDE (Programming/Thonny Python IDE)
+   * Run qrCodeReader.py https://github.com/Jafarshamsi/Raspberry/tree/main/QR_reader
 ## Reference
 [1] https://www.raspberrypi.com/documentation/computers/os.html 
 [2] https://www.raspberrypi.com/documentation/accessories/camera.html

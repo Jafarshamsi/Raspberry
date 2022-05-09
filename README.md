@@ -52,8 +52,25 @@ https://www.raspberrypi.com/software/
 ## Part 4: Connecting Raspberry Cam
 **1. Connect to PI over VNC Viwer**
 
-**2. Enable direct capture mode**
-* Click On VNC Server icon on the top-right
-* Troubleshooting/Enable direct capture mode
-**3. Click On VNC Server icon on the top-right**
+**2. Enable raspberry pi camera from raspi-cofing**
+   * open raspbery config
+   ```sh
+   sudo raspi-config
+   ```
+   * Interface Options/ Enable Camera
+   * QUICK-NOTE: it was possible to enable it from Raspberry Pi Configuration inside the OS, however, it seems that it is removed from there
 
+**3. Take picture and view video**
+   * Take Picture: go to desktop
+   ```sh
+   raspistill -o 1.jpg
+   ```
+   * Capture video: go to desktop
+   ```sh
+   raspivid -t 5000 -p 0,0,640,480 -vf
+   ```
+   * QUICK-NOTE: it was possible to enable it from Raspberry Pi Configuration inside the OS, however, it seems that it is removed from there
+
+## Reference
+   [1] https://www.raspberrypi.com/documentation/computers/os.html
+   [2] https://www.tomshardware.com/reviews/raspberry-pi-headless-setup-how-to,6028.html

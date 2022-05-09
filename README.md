@@ -1,6 +1,6 @@
 # Raspberry Pi Zero 2 W
 
-## Part 1: Install Raspberry Pi OS on Windows
+## Part 1: Install Raspberry Pi OS on Windows (Headless)
 **1. Download, install, and run "Raspberry Pi Imager"**
 https://www.raspberrypi.com/software/
 
@@ -35,7 +35,7 @@ https://www.raspberrypi.com/software/
  
  **4. Enter Username and Password**
  
-## Part 3: Changing the WIFI network
+## Part 3: Changing the WIFI network, if it has changed (Headless)
 * Create file "wpa_supplicant.conf", write the following lines there, and put the file in the boot folder in SD card. https://github.com/Jafarshamsi/Raspberry/tree/main/First_Boot
    ```sh
    country=US
@@ -48,3 +48,12 @@ https://www.raspberrypi.com/software/
    psk="your_wifi_password"
    }
    ```
+
+## Part 4: Connecting Raspberry Cam
+**1. Connect to PI over VNC Viwer**
+
+**2. Enable direct capture mode**
+* Click On VNC Server icon on the top-right
+* Troubleshooting/Enable direct capture mode
+**3. Click On VNC Server icon on the top-right**
+

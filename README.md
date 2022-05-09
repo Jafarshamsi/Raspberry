@@ -3,7 +3,6 @@
 ## Part 1: Install Raspberry Pi OS on Windows
 **1. Download, install, and run "Raspberry Pi Imager"**
 https://www.raspberrypi.com/software/
-![alt text](https://github.com/Jafarshamsi/Raspberry/blob/main/IMAGE/1.RPI_OS.png)
 
 **2. Choose OS: Raspberry Pi OS (32 bit)**
 
@@ -21,17 +20,16 @@ https://www.raspberrypi.com/software/
 
 **9. Enter username and password**
 
-## Part 2: Enabling and Connecting over VNC**
+## Part 2: Enabling and Connecting over VNC
 
 **1. Enable VNC**
    ```sh
    sudo raspi-config
    ```
-   * Select "Interfacing Options"
-   * Select "VNC"and enable it
-   * Finish
+   * Select "Interfacing Options", then "VNC"and enable it
 
  **2. Download, install and launch VNC Viewer**
+ https://www.realvnc.com/en/connect/download/viewer/windows/
  
  **3. create a new connection: Enter "raspberrypi.local" in VNC Server section**
  

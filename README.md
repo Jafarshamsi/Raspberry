@@ -20,7 +20,7 @@ https://www.raspberrypi.com/software/
 
 **9. Enter username and password**
 
-## Part 2: Enabling and Connecting over VNC**
+## Part 2: Enabling and Connecting over VNC
 
 **1. Enable VNC**
    ```sh

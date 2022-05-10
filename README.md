@@ -79,7 +79,12 @@ https://www.raspberrypi.com/software/
 **2. USING libcamera library (Not working now): Disable Raspicam library from raspi-cofing**
    * QUICK-NOTE: More information here: https://www.raspberrypi.com/documentation/accessories/camera.html#libcamera-and-libcamera-apps
 
-## Part 4: QR Code reader
+## Part 4: QR Code generator https://segno.readthedocs.io/en/stable/index.html
+   ```sh
+   pip install segno
+   segno "Hello World!"
+   ```
+## Part 5: QR Code reader https://pypi.org/project/pyzbar/
    * install packages
    ```sh
    sudo apt-get update

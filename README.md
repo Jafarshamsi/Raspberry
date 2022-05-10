@@ -99,7 +99,9 @@ https://www.raspberrypi.com/software/
    ```
    * Run qrCodeReader.py https://github.com/Jafarshamsi/Raspberry/tree/main/QR_reader
 
-## Part 5: MTDS 
+## Part 6: CrossCompile 
+
+## Part 7: MTDS 
    * Enabling SPI in raspi-config (interface options/SPI)
    ```sh
    sudo raspi-config

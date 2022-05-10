@@ -98,6 +98,14 @@ https://www.raspberrypi.com/software/
    exit()
    ```
    * Run qrCodeReader.py https://github.com/Jafarshamsi/Raspberry/tree/main/QR_reader
+
+## Part 5: MTDS 
+   * Enabling SPI in raspi-config (interface options/SPI)
+   ```sh
+   sudo raspi-config
+   ```
+   * connect MTDS to Raspberry
+   
 ## Reference
 [1] https://www.raspberrypi.com/documentation/computers/os.html 
 [2] https://www.raspberrypi.com/documentation/accessories/camera.html

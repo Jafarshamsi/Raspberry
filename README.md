@@ -99,8 +99,26 @@ https://www.raspberrypi.com/software/
    ```
    * Run qrCodeReader.py https://github.com/Jafarshamsi/Raspberry/tree/main/QR_reader
 
-## Part 6: CrossCompile 
-
+## Part 6: C++ CrossCompile (VisualGDB is an alternative)
+   * Install the toolchain (The GCC compiler for C and C++ languages) from https://gnutoolchains.com/raspberry/ 
+   * Create a helloworld.cpp
+   ```sh
+   #include <stdio.h>
+   int main()
+   {
+       printf("Hello, world\n");
+       return 0;
+   }
+   ```
+   * Compile the code through powershell 
+   ```sh
+   <toolchain>\bin\arm-linux-gnueabihf-g++.exe -ggdb helloworld.cpp -o helloworld
+   ```
+   * Copy the generated file (helloworld) into a folder in rasparay pi and run it
+   ```sh
+   chmod a+x helloworld
+   ./helloworld
+   ```
 ## Part 7: MTDS 
    * Enabling SPI in raspi-config (interface options/SPI)
    ```sh

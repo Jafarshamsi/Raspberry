@@ -143,7 +143,7 @@ https://www.raspberrypi.com/software/
    ```sh
    ls -l /dev/serial*
    ``` 
-   * install minicom to test (connect tx to rx and write something)
+   * install minicom to test (connect tx(pin8) to rx(pin10) and write something)
    ```sh
    sudo apt-get install minicom
    minicom -b 9600 -o -D /dev/ttyS0

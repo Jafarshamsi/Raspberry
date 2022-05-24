@@ -119,16 +119,18 @@ https://www.raspberrypi.com/software/
    chmod a+x helloworld
    ./helloworld
    ```
-## Part 7: UART
+## Part 7: [UART](https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/configuration/uart.adoc)
    * PINs: 
-   * Functionality: There are 2 UARTs: UART0(PL011) + UART1(mini UART(reduced features))
-   * Kernel: There are 2 UARTs: Primary UART(/dev/serial0) + Secondary UART(/dev/serial1)
-   * Settings: UART0 in config.txt
+   * Functionality: There are 2 UARTs: PL011 (UART0) + mini UART(UART1)
+   * Kernel: There are 2 UARTs: Primary UART(serial0) + Secondary UART(serial1)
    
    * modify cofing.txt and disable bluetooth
    ```sh
    sudo nano /boot/config.txt
    dtoverlay = disable-bt
+   core_freq=250
+	enable_uart=1
+	force_turbo=1
    ```
    * modify disable bluetooth services and reboot
    ```sh
@@ -145,7 +147,7 @@ https://www.raspberrypi.com/software/
    * install minicom to test
    ```sh
    sudo apt-get install minicom
-   minicom -b 9600 -o -D /dev/ttyAMA0
+   minicom -b 9600 -o -D /dev/ttyS0
    pkill minicom
    ``` 
 ## Reference

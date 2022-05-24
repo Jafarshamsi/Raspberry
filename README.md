@@ -119,13 +119,35 @@ https://www.raspberrypi.com/software/
    chmod a+x helloworld
    ./helloworld
    ```
-## Part 7: MTDS 
-   * Enabling SPI in raspi-config (interface options/SPI)
-   ```sh
-   sudo raspi-config
-   ```
-   * connect MTDS to Raspberry
+## Part 7: UART
+   * PINs: 
+   * Functionality: There are 2 UARTs: UART0(PL011) + UART1(mini UART(reduced features))
+   * Kernel: There are 2 UARTs: Primary UART(/dev/serial0) + Secondary UART(/dev/serial1)
+   * Settings: UART0 in config.txt
    
+   * modify cofing.txt and disable bluetooth
+   ```sh
+   sudo nano /boot/config.txt
+   dtoverlay = disable-bt
+   ```
+   * modify disable bluetooth services and reboot
+   ```sh
+   sudo systemctl disable hciuart.service
+   sudo systemctl disable bluealsa.service
+   sudo systemctl disable bluetooth.service
+   sudo reboot
+   ```
+   * modify disable bluetooth services and reboot
+   * check the seiral ports
+   ```sh
+   ls -l /dev/serial*
+   ``` 
+   * install minicom to test
+   ```sh
+   sudo apt-get install minicom
+   minicom -b 9600 -o -D /dev/ttyAMA0
+   pkill minicom
+   ``` 
 ## Reference
 [1] https://www.raspberrypi.com/documentation/computers/os.html 
 [2] https://www.raspberrypi.com/documentation/accessories/camera.html

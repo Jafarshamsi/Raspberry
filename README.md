@@ -129,8 +129,8 @@ https://www.raspberrypi.com/software/
    sudo nano /boot/config.txt
    dtoverlay = disable-bt
    core_freq=250
-	enable_uart=1
-	force_turbo=1
+   enable_uart=1
+   force_turbo=1
    ```
    * modify disable bluetooth services and reboot
    ```sh
@@ -139,12 +139,11 @@ https://www.raspberrypi.com/software/
    sudo systemctl disable bluetooth.service
    sudo reboot
    ```
-   * modify disable bluetooth services and reboot
    * check the seiral ports
    ```sh
    ls -l /dev/serial*
    ``` 
-   * install minicom to test
+   * install minicom to test (connect tx to rx and write something)
    ```sh
    sudo apt-get install minicom
    minicom -b 9600 -o -D /dev/ttyS0

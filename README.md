@@ -152,7 +152,7 @@ https://www.raspberrypi.com/software/
 ## Part 8: startup
    *  modify rc.local and a line to run your code
    ```sh
-   sudo nano /etc/rc.local
+   sudo nano /home/pi/.bashrc
    python /Desktop/QR_UART.py &
    ``` 
 ## Reference

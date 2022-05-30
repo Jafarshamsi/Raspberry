@@ -149,6 +149,12 @@ https://www.raspberrypi.com/software/
    minicom -b 9600 -o -D /dev/ttyS0
    pkill minicom
    ``` 
+## Part 8: startup
+   *  modify rc.local and a line to run your code
+   ```sh
+   sudo nano /etc/rc.local
+   python /Desktop/QR_UART.py &
+   ``` 
 ## Reference
 [1] https://www.raspberrypi.com/documentation/computers/os.html 
 [2] https://www.raspberrypi.com/documentation/accessories/camera.html

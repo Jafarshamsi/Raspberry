@@ -139,10 +139,17 @@ https://www.raspberrypi.com/software/
    sudo systemctl disable bluetooth.service
    sudo reboot
    ```
+   * disable consule UART
+   ```sh
+   sudo nano /boot/cmdline.txt
+   dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait quiet splash plymouth.ignore-serial-consoles
+   ``` 
    * check the seiral ports
    ```sh
    ls -l /dev/serial*
    ``` 
+
+
    * install minicom to test (connect tx(pin8) to rx(pin10) and write something)
    ```sh
    sudo apt-get install minicom

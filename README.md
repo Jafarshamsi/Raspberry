@@ -79,25 +79,89 @@ https://www.raspberrypi.com/software/
 **2. USING libcamera library (Not working now): Disable Raspicam library from raspi-cofing**
    * QUICK-NOTE: More information here: https://www.raspberrypi.com/documentation/accessories/camera.html#libcamera-and-libcamera-apps
 
-## Part 4: QR Code reader
+## Part 4: QR Code generator https://segno.readthedocs.io/en/stable/index.html
+   ```sh
+   pip install segno
+   segno "Hello World!"
+   ```
+## Part 5: QR Code reader https://pypi.org/project/pyzbar/
    * install packages
    ```sh
    sudo apt-get update
    sudo apt-get install python3-opencv libzbar0 python3-pip
    python3 -m pip install pyzbar
-
-   sudo apt-get install python3-opencv
-   sudo apt-get install python3-sip python3-pyqt5 libjasper-dev libatlas-base-dev -y
-   pip3 install opencv-contrib-python
-   sudo modprobe bcm2835-v4l2
    ```
-   * check python
+   * check python and Thonny Python IDE (Programming/Thonny Python IDE)
    ```sh
    python
    print("Hello World!")
    exit()
    ```
-   * Open Thonny Python IDE (Programming/Thonny Python IDE)
+   * Run qrCodeReader.py https://github.com/Jafarshamsi/Raspberry/tree/main/QR_reader
+
+## Part 6: C++ CrossCompile (VisualGDB is an alternative)
+   * Install the toolchain (The GCC compiler for C and C++ languages) from https://gnutoolchains.com/raspberry/ 
+   * Create a helloworld.cpp
+   ```sh
+   #include <stdio.h>
+   int main()
+   {
+       printf("Hello, world\n");
+       return 0;
+   }
+   ```
+   * Compile the code through powershell 
+   ```sh
+   <toolchain>\bin\arm-linux-gnueabihf-g++.exe -ggdb helloworld.cpp -o helloworld
+   ```
+   * Copy the generated file (helloworld) into a folder in rasparay pi and run it
+   ```sh
+   chmod a+x helloworld
+   ./helloworld
+   ```
+## Part 7: [UART](https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/configuration/uart.adoc)
+   * PINs: 
+   * Functionality: There are 2 UARTs: PL011 (UART0) + mini UART(UART1)
+   * Kernel: There are 2 UARTs: Primary UART(serial0) + Secondary UART(serial1)
+   
+   * modify cofing.txt and disable bluetooth
+   ```sh
+   sudo nano /boot/config.txt
+   dtoverlay = disable-bt
+   core_freq=250
+   enable_uart=1
+   force_turbo=1
+   ```
+   * modify disable bluetooth services and reboot
+   ```sh
+   sudo systemctl disable hciuart.service
+   sudo systemctl disable bluealsa.service
+   sudo systemctl disable bluetooth.service
+   sudo reboot
+   ```
+   * disable consule UART
+   ```sh
+   sudo nano /boot/cmdline.txt
+   dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait quiet splash plymouth.ignore-serial-consoles
+   ``` 
+   * check the seiral ports
+   ```sh
+   ls -l /dev/serial*
+   ``` 
+
+
+   * install minicom to test (connect tx(pin8) to rx(pin10) and write something)
+   ```sh
+   sudo apt-get install minicom
+   minicom -b 9600 -o -D /dev/ttyS0
+   pkill minicom
+   ``` 
+## Part 8: startup
+   *  modify rc.local and a line to run your code
+   ```sh
+   sudo nano /home/pi/.bashrc
+   python /home/pi/Desktop/QR_UART.py &
+   ``` 
 ## Reference
 [1] https://www.raspberrypi.com/documentation/computers/os.html 
 [2] https://www.raspberrypi.com/documentation/accessories/camera.html
